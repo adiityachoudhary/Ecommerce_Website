@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cart - Aniket Water</title>
+  <title>Cart - HydroMate</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -12,40 +12,41 @@
   <link rel="icon" href="favicon.ico" />
 </head>
 
-<body style="background: linear-gradient(to right, #ebfffa, #fcffe7);">
+<body id="home">
 
-  <!-- Navbar (Same as homepage) -->
-  <nav class="navbar navbar-expand-lg navbar-dark shadow sticky-top "
-    style="background-color: rgba(8, 156, 164, 0.492);">
-    <div class="container">
-      <a class="navbar-brand fw-bold " href="index.html">Aniket Water Store</a>
-      <button class="navbar-toggler btn btn-outline-secondary" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse " id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item text-dark "><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#products">Products</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fw-bold shadow-lg sticky-top"
+        style="background-color: rgba(8, 156, 164, 0.492); ">
+        <div class="container ">
+            <a class="navbar-brand " href="index.html">HydroMate</a>
+            <button class="navbar-toggler  btn btn-outline-secondary btn-sm" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarNav">
+                <ul class="navbar-nav ms-auto " >
+                    <li class="nav-item "><a class="nav-link active text-dark fs-5" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fs-5" href="index.html#products">Products</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fs-5" href="#contact">Contact</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-  <div class="container-fluid">
+  <div class="container-fluid ">
     <!-- Cart Content -->
-    <div class="container my-5">
-      <h2 class="text-center mb-4 text-light">Your Cart</h2>
-      <div id="cart-items" class="table-responsive">
-        <table class="table table-bordered bg-white">
-          <thead class="table-dark">
+    <div class="container my-5 ">
+      <h2 class="text-center mb-4 text-dark fw-bold">Your Cart</h2>
+      <div id="cart-items" class="table-responsive ">
+        <table class="table table-bordered bg-white ">
+          <thead class="table-dark ">
             <tr>
               <th>Product</th>
               <th>Price</th>
-              <th>Qty</th>
+              <th>Items</th>
               <th>Total</th>
-              <th>Action</th>
+              <th></th>
             </tr>
           </thead>
           <tbody id="cart-body">
@@ -70,32 +71,38 @@
 
     <!-- Footer -->
 
-    <footer class=" row align-items-center bg-black text-light text-center py-4 mt-4 " id="contact"
-      style="background-color: #f5f5f5; padding: 30px 20px; text-align: center; font-family: Arial, sans-serif; font-size: 14px; color: #333;">
+        <footer class=" row align-items-center bg-black text-light text-center py-4 mt-5 " id="contact"
+            style="background-color: #f5f5f5; padding: 30px 20px; text-align: center; font-family: Arial, sans-serif; font-size: 14px; color: #333;">
 
-      <div class="col-lg-9 order-2 order-lg-1 pt-3">
-        <strong>© 2025 Aniket Water Store. All rights reserved.</strong><br>
-        💧 <em>Delivering Purity</em><br><br>
+            <!-- logo -->
+             <a href="#home" class=" col-lg-3 col-12 order-2 order-lg-1 mx-auto d-block my-5">
+                <img src="img/icon.png" alt="logo" class="logo">
+</a>
 
-        <p class="mb-0">📍Address: Patel Nagar, Patna 800023</p><br>
+            <!-- footnote -->
+            <div class="col-lg-6 col-12 order-3 order-lg-2 pt-3">
+                <strong>© 2025 Aniket Water Store. All rights reserved.</strong><br>
+                💧 <em>Delivering Purity</em><br><br>
 
-        <p>📞 Customer Support: <a href="tel:+918539993163"
-            style="color: #0066cc; text-decoration: none;">+918539993163</a> |
-          ✉️Email:<a href="mailto:aniketkr853@gmail.com"
-            style="color: #0066cc; text-decoration: none;">aniketkr853@gmail.com</a></p> <br>
+                <p class="mb-0">📍Address: Patel Nagar, Patna 800023</p><br>
 
-        🔒 100% Secure Payments | 🚚 Fast & Reliable Delivery | ♻️ Eco-Friendly Packaging<br><br>
-        <div>Developed with lots of ☕ by <a href="https://adiityachoudhary.github.io/web-dev/" target="_blank">Aditya
-            Choudhary</a></div>
+                <p>📞 Customer Support: <a href="tel:+918539993163"
+                        style="color: #0066cc; text-decoration: none;">+918539993163</a> |
+                    ✉️Email:<a href="mailto:aniketkr853@gmail.com"
+                        style="color: #0066cc; text-decoration: none;">aniketkr853@gmail.com</a></p> <br>
 
+                🔒 100% Secure Payments | 🚚 Fast & Reliable Delivery | ♻️ Eco-Friendly Packaging<br><br>
+                <div>Developed with lots of ☕ by <a href="https://adiityachoudhary.github.io/web-dev/"
+                        target="_blank">Aditya Choudhary</a></div>
+            </div>
 
-      </div>
-      <div class="col-lg-3 order-1 order-lg-2"><iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d652.863485811403!2d85.09551474130052!3d25.618569320281733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1750364845693!5m2!1sen!2sin"
-          width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+            <!-- map -->
+            <div class="col-lg-3 col-12  order-1 order-lg-2 map"><iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d652.863485811403!2d85.09551474130052!3d25.618569320281733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1750364845693!5m2!1sen!2sin"
+                    width="320" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe></div>
 
-    </footer>
+        </footer>
   </div>
 
   <script>
