@@ -54,6 +54,7 @@
         .card-img-top {
             border-radius: 30px;
         }
+        
     </style>
 </head>
 
@@ -63,15 +64,16 @@
         style="background-color: rgba(8, 156, 164, 0.492);">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">Aniket Water Store</a>
-            <button class="navbar-toggler btn btn-outline-secondary" type="button" data-bs-toggle="collapse"
+            <button class="navbar-toggler btn btn-outline-secondary btn-sm" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse " id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                <ul class="navbar-nav ms-auto ">
+                    <li class="nav-item "><a class="nav-link active" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
                 </ul>
             </div>
         </div>
@@ -99,7 +101,7 @@
                                 <div class="input-group mb-3">
                                     <input type="number" min="1" value="1" class="form-control" aria-label="Quantity">
                                     <button class="btn btn-success"
-                                        onclick="addToCart('Jar of 20L Water', 99.99, this.parentElement.querySelector('input').value)">
+                                        onclick="addToCart('Jar of 20L Water', 50, this.parentElement.querySelector('input').value)">
                                         <i class="bi bi-cart"></i> Add to Cart
                                     </button>
                                 </div>
@@ -119,7 +121,7 @@
                                 <div class="input-group mb-3">
                                     <input type="number" min="1" value="1" class="form-control" aria-label="Quantity">
                                     <button class="btn btn-success"
-                                        onclick="addToCart('Bottle of 2L Water', 99.99, this.parentElement.querySelector('input').value)">
+                                        onclick="addToCart('Bottle of 2L Water', 25, this.parentElement.querySelector('input').value)">
                                         <i class="bi bi-cart"></i> Add to Cart
                                     </button>
                                 </div>
@@ -139,13 +141,23 @@
                                 <div class="input-group mb-3">
                                     <input type="number" min="1" value="1" class="form-control" aria-label="Quantity">
                                     <button class="btn btn-success"
-                                        onclick="addToCart('Bottle of 1L Water', 99.99, this.parentElement.querySelector('input').value)">
+                                        onclick="addToCart('Bottle of 1L Water', 15, this.parentElement.querySelector('input').value)">
                                         <i class="bi bi-cart"></i> Add to Cart
                                     </button>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <br><br>
+                <div class="container mt-5">
+                    <h2 class="text-center fw-bold" id="cart-total">Proceed to Cart to Checkout</h2>
+
+                    <a href="cart.html" class="row p-4 link-underline link-underline-opacity-0">
+                        <button type="button" class="btn btn-success btn-lg btn-block fw-bold ">Go to
+                            Cart</button></a>
+
                 </div>
 
 
@@ -170,7 +182,8 @@
                         style="color: #0066cc; text-decoration: none;">aniketkr853@gmail.com</a></p> <br>
 
                 🔒 100% Secure Payments | 🚚 Fast & Reliable Delivery | ♻️ Eco-Friendly Packaging<br><br>
-            <div>Developed with lots of ☕ by <a href="https://adiityachoudhary.github.io/web-dev/" target="_blank">Aditya Choudhary</a></div>
+                <div>Developed with lots of ☕ by <a href="https://adiityachoudhary.github.io/web-dev/"
+                        target="_blank">Aditya Choudhary</a></div>
 
 
             </div>
@@ -184,9 +197,18 @@
         <!-- Cart Script -->
         <script>
             function addToCart(name, price, quantity) {
+                const cart = JSON.parse(localStorage.getItem("cart")) || [];
+                const existing = cart.find(item => item.name === name);
+                if (existing) {
+                    existing.quantity += parseInt(quantity);
+                } else {
+                    cart.push({ name, price, quantity: parseInt(quantity) });
+                }
+                localStorage.setItem("cart", JSON.stringify(cart));
                 alert(`${quantity} x ${name} added to cart.`);
             }
         </script>
+
 
 
     </div>

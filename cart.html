@@ -1,57 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cart - Aniket Water Store</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cart - Aniket Water</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" />
 </head>
-<body class="bg-light">
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="index.html">Aniket Water Store</a>
+
+<body style="background: linear-gradient(to right, #ebfffa, #fcffe7);">
+
+  <!-- Navbar (Same as homepage) -->
+  <nav class="navbar navbar-expand-lg navbar-dark shadow sticky-top "
+    style="background-color: rgba(8, 156, 164, 0.492);">
+    <div class="container">
+      <a class="navbar-brand fw-bold " href="index.html">Aniket Water Store</a>
+      <button class="navbar-toggler btn btn-outline-secondary" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item text-dark "><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#products">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <!-- Cart Content -->
+    <div class="container my-5">
+      <h2 class="text-center mb-4 text-light">Your Cart</h2>
+      <div id="cart-items" class="table-responsive">
+        <table class="table table-bordered bg-white">
+          <thead class="table-dark">
+            <tr>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Qty</th>
+              <th>Total</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="cart-body">
+            <!-- Items dynamically inserted -->
+          </tbody>
+        </table>
+      </div>
+
+      <div class="col-sm-12 text-lg-end text-center mt-3">
+        <h4 id="cart-total">Total: ₹0</h4>
+        <button class="btn btn-success btn-lg btn-block fw-bold" onclick="checkout()">Proceed to UPI Payment</button>
+      </div>
+<br><br><br><br>
+       <div class="container px-5">
+      <a href="index.html" class=" row p-4 link-underline link-underline-opacity-0">
+        <button type="button" class="btn btn-warning btn-lg btn-block fw-bold ">Home</button></a>
+
+    </div>
+    </div><br><br>
+
+   
+
+    <!-- Footer -->
+
+    <footer class=" row align-items-center bg-black text-light text-center py-4 mt-4 " id="contact"
+      style="background-color: #f5f5f5; padding: 30px 20px; text-align: center; font-family: Arial, sans-serif; font-size: 14px; color: #333;">
+
+      <div class="col-lg-9 order-2 order-lg-1 pt-3">
+        <strong>© 2025 Aniket Water Store. All rights reserved.</strong><br>
+        💧 <em>Delivering Purity</em><br><br>
+
+        <p class="mb-0">📍Address: Patel Nagar, Patna 800023</p><br>
+
+        <p>📞 Customer Support: <a href="tel:+918539993163"
+            style="color: #0066cc; text-decoration: none;">+918539993163</a> |
+          ✉️Email:<a href="mailto:aniketkr853@gmail.com"
+            style="color: #0066cc; text-decoration: none;">aniketkr853@gmail.com</a></p> <br>
+
+        🔒 100% Secure Payments | 🚚 Fast & Reliable Delivery | ♻️ Eco-Friendly Packaging<br><br>
+        <div>Developed with lots of ☕ by <a href="https://adiityachoudhary.github.io/web-dev/" target="_blank">Aditya
+            Choudhary</a></div>
+
+
+      </div>
+      <div class="col-lg-3 order-1 order-lg-2"><iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d652.863485811403!2d85.09551474130052!3d25.618569320281733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1750364845693!5m2!1sen!2sin"
+          width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+
+    </footer>
   </div>
-</nav>
-<div class="container mt-5">
-  <h2 class="mb-4">Your Cart</h2>
-  <table class="table table-bordered" id="cartTable">
-    <thead class="table-primary">
-      <tr>
-        <th>Product</th>
-        <th>Quantity</th>
-        <th>Price (₹)</th>
-        <th>Total (₹)</th>
-      </tr>
-    </thead>
-    <tbody></tbody>
-    <tfoot>
-      <tr>
-        <td colspan="3" class="text-end fw-bold">Grand Total</td>
-        <td id="grandTotal" class="fw-bold">0</td>
-      </tr>
-    </tfoot>
-  </table>
-  <a href="checkout.html" class="btn btn-success">Proceed to Checkout</a>
-</div>
-<script>
-const cart = JSON.parse(localStorage.getItem('cart')) || [];
-function displayCart() {
-  const tbody = document.querySelector('#cartTable tbody');
-  let grandTotal = 0;
-  tbody.innerHTML = '';
-  cart.forEach(item => {
-    const total = item.price * item.quantity;
-    grandTotal += total;
-    tbody.innerHTML += `<tr>
-      <td>${item.name}</td>
-      <td>${item.quantity}</td>
-      <td>${item.price}</td>
-      <td>${total}</td>
-    </tr>`;
-  });
-  document.getElementById('grandTotal').textContent = grandTotal.toFixed(2);
-}
-displayCart();
-</script>
+
+  <script>
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    function updateCart() {
+      const cartBody = document.getElementById("cart-body");
+      cartBody.innerHTML = "";
+      let total = 0;
+
+      cart.forEach((item, index) => {
+        const itemTotal = item.price * item.quantity;
+        total += itemTotal;
+
+        cartBody.innerHTML += `
+                    <tr>
+                        <td>${item.name}</td>
+                        <td>₹${item.price}</td>
+                        <td>
+                            <input type="number" min="1" value="${item.quantity}" onchange="changeQty(${index}, this.value)" class="form-control">
+                        </td>
+                        <td>₹${itemTotal.toFixed(2)}</td>
+                        <td><button class="btn btn-danger btn-sm" onclick="removeItem(${index})">Remove</button></td>
+                    </tr>
+                `;
+      });
+
+      document.getElementById("cart-total").textContent = "Total: ₹" + total.toFixed(2);
+      localStorage.setItem("cart", JSON.stringify(cart));
+    }
+
+    function removeItem(index) {
+      cart.splice(index, 1);
+      updateCart();
+    }
+
+    function changeQty(index, newQty) {
+      cart[index].quantity = parseInt(newQty);
+      updateCart();
+    }
+
+    function checkout() {
+      alert("Redirecting to UPI Payment...");
+      // Simulate UPI payment
+      setTimeout(() => {
+        alert("Payment successful!");
+        localStorage.removeItem("cart");
+        window.location.href = "index.html";
+      }, 1500);
+    }
+
+    window.onload = updateCart;
+  </script>
 </body>
+
 </html>
