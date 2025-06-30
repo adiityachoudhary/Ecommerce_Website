@@ -1,49 +1,58 @@
  html {
-            scroll-behavior: smooth;
+     scroll-behavior: smooth;
+ }
+
+ body {
+     background: linear-gradient(to right, #0080ff, #16a7ba);
+     animation: gradientFade 10s infinite alternate;
+     background-image: url();
+ }
+
+
+ .navbar {
+     backdrop-filter: blur(10px) saturate(180%);
+ }
+
+ @keyframes gradientFade {
+     from {
+         background: linear-gradient(to right, #e8fbff, #b2f6ff);
+     }
+
+     to {
+         background: linear-gradient(to right, #e8fbff, #b2f6ff);
+     }
+ }
+
+ .fade-in {
+     animation: fadeIn 1s ease-in;
+ }
+
+ @keyframes fadeIn {
+     0% {
+         opacity: 0;
+         transform: translateY(20px);
+     }
+
+     100% {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+ .card,
+ .card-img-top {
+     border-radius: 30px;
+ }
+
+ .logo {
+     width: 150px;
+
+ }
+
+ .nav-link:hover {
+    text-decoration: underline;
+    color: #e0f7fa !important;
+}
+.bottom-nav {
+            border-top: 1px solid #ccc;
         }
-
-        body {
-            background: linear-gradient(to right, #0080ff, #16a7ba);
-            animation: gradientFade 10s infinite alternate;
-            background-image: url();
-        }
-
-        .navbar {
-            backdrop-filter: blur(10px) saturate(180%);
-        }
-
-        @keyframes gradientFade {
-            from {
-                background: linear-gradient(to right, #e8fbff, #b2f6ff);
-            }
-
-            to {
-                background: linear-gradient(to right, #e8fbff, #b2f6ff);
-            }
-        }
-
-        .fade-in {
-            animation: fadeIn 1s ease-in;
-        }
-
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .card,
-        .card-img-top {
-            border-radius: 30px;
-        }
-        
-        .logo{
-            width: 150px;
-            
-        }      

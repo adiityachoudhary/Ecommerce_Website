@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact | Aniket Water Store</title>
+<link rel="icon" href="favicon.ico">
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #c2e9fb, #a1c4fd);
+            min-height: 100vh;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        .contact-info h2 {
+            color: #00bcd4;
+            font-weight: 600;
+        }
+
+        .contact-info a {
+            color: #00bcd4;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-note {
+            font-size: 0.9rem;
+            text-align: center;
+            color: #333;
+            margin-top: 30px;
+        }
+
+        .footer-note a {
+            color: #00bcd4;
+            text-decoration: none;
+        }
+
+        .footer-note a:hover {
+            text-decoration: underline;
+        }
+
+        iframe {
+            border-radius: 12px;
+            border: 0;
+            width: 100%;
+            height: 100%;
+            min-height: 300px;
+        }
+
+        @media (max-width: 768px) {
+            .glass-card {
+                padding: 25px;
+            }
+        }
+        .nav-link:hover {
+    text-decoration: underline;
+    color: #e0f7fa !important;
+}
+    </style>
+</head>
+
+<body id="contact">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fw-bold shadow-lg sticky-top d-none d-lg-block"
+        style="background-color: rgba(8, 156, 164, 0.492); ">
+        <div class="container ">
+            <a class="navbar-brand " href="index.html#home"><img src="img/brand.png" alt="hydromate_logo"
+                    height="35px"></a>
+            <button class="navbar-toggler  btn btn-outline-secondary btn-sm" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarNav">
+                <ul class="navbar-nav ms-auto ">
+                    <li class="nav-item "><a class="nav-link active text-dark fs-5" href="index.html#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fs-5" href="product.html#products">Products</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fs-5" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fs-5" href="cart.html">Cart</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid d-flex px-4 my-5">
+        <div class="glass-card mx-auto">
+            <div class="row g-4 align-items-start">
+                <!-- Contact Info -->
+                <div class="col-md-6 contact-info">
+                    <h2>Contact Us</h2>
+                    <p><strong>📍 Address:</strong> Patel Nagar, Patna 800023</p>
+                    <p><strong>📞 Phone:</strong> <a href="tel:+918539993163">+91 85399 93163</a></p>
+                    <p><strong>✉️ Email:</strong> <a href="mailto:aniketkr853@gmail.com">aniketkr853@gmail.com</a></p>
+
+                    <h5 class="mt-4">Why Choose Us?</h5>
+                    <ul class="ps-3">
+                        <li>🔒 100% Secure Payments</li>
+                        <li>🚚 Fast & Reliable Delivery</li>
+                        <li>♻️ Eco-Friendly Packaging</li>
+                    </ul>
+                    <p class="mt-4"><em>💧 Delivering Purity</em></p>
+                </div>
+
+                <!-- Google Map -->
+                <div class="col-md-6">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d652.863485811403!2d85.09551474130052!3d25.618569320281733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1750364845693!5m2!1sen!2sin"
+                        allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Footer Note -->
+            <div class="footer-note mt-4">
+                <p>© 2025 Aniket Water Store. All rights reserved.</p>
+                <p>Developed with ☕ by <a href="https://adiityachoudhary.github.io/web-dev/" target="_blank" class="text-primary">Aditya
+                        Choudhary</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- bottom navbar -->
+    <div class="d-block d-lg-none bottom-nav d-flex justify-content-around align-items-center position-fixed bottom-0 w-100 bg-white shadow-sm py-2"
+        style="z-index: 999;">
+        <a href="index.html#home" class="text-center text-decoration-none text-dark">
+            <i class="fas fa-home d-block fs-5"></i>
+            <small>Home</small>
+        </a>
+        <a href="product.html#products" class="text-center text-decoration-none text-dark">
+            <i class="fas fa-box-open d-block fs-5"></i>
+            <small>Products</small>
+        </a>
+        <a href="contact.html#contact" class="text-center text-decoration-none text-dark">
+            <i class="fas fa-envelope d-block fs-5"></i>
+            <small>Contact</small>
+        </a>
+        <a href="cart.html" class="text-center text-decoration-none text-dark">
+            <i class="fas fa-shopping-cart d-block fs-5"></i>
+            <small>My Cart</small>
+        </a>
+    </div>
+
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
