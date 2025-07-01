@@ -3,25 +3,25 @@
  }
 
  body {
-     background: linear-gradient(to right, #0080ff, #16a7ba);
-     animation: gradientFade 10s infinite alternate;
-     background-image: url();
+     background: linear-gradient(180deg, #92f5e5b7, #4ba9bcd2);
+     /* animation: gradientFade 10s infinite alternate;
+     background-image: url(); */
  }
 
 
  .navbar {
      backdrop-filter: blur(10px) saturate(180%);
  }
-
+/* 
  @keyframes gradientFade {
      from {
-         background: linear-gradient(to right, #e8fbff, #b2f6ff);
+         background: linear-gradient(to right,  #92f5e5b7, #4ba9bcd2);
      }
 
      to {
-         background: linear-gradient(to right, #e8fbff, #b2f6ff);
+         background: linear-gradient(to right,  #92f5e5b7, #4ba9bcd2);
      }
- }
+ } */
 
  .fade-in {
      animation: fadeIn 1s ease-in;
@@ -50,9 +50,19 @@
  }
 
  .nav-link:hover {
-    text-decoration: underline;
-    color: #e0f7fa !important;
-}
-.bottom-nav {
-            border-top: 1px solid #ccc;
-        }
+     text-decoration: underline;
+     color: #e0f7fa !important;
+ }
+
+ .bottom-nav {
+     border-top: 1px solid #ccc;
+ }
+
+ .bottom-nav-link-hover {
+     transition: color 0.3s ease, transform 0.2s ease;
+ }
+
+ .bottom-nav-link-hover:hover {
+     color: #0d6efd !important;
+     transform: scale(1.1);
+ }
