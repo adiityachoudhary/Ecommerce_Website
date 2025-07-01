@@ -4,8 +4,6 @@
 
  body {
      background: linear-gradient(180deg, #92f5e5b7, #4ba9bcd2);
-     /* animation: gradientFade 10s infinite alternate;
-     background-image: url(); */
  }
 
 
@@ -13,16 +11,6 @@
      backdrop-filter: blur(10px) saturate(180%);
       -webkit-backdrop-filter: blur(10px) saturate(180%); /* Safari support */
  }
-/* 
- @keyframes gradientFade {
-     from {
-         background: linear-gradient(to right,  #92f5e5b7, #4ba9bcd2);
-     }
-
-     to {
-         background: linear-gradient(to right,  #92f5e5b7, #4ba9bcd2);
-     }
- } */
 
  .fade-in {
      animation: fadeIn 1s ease-in;
