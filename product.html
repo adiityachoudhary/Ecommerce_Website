@@ -16,7 +16,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.ico">
     <style>
-
+        .card {
+            border-radius: 10px;
+        }
     </style>
 </head>
 
@@ -54,9 +56,9 @@
 
         <!-- Product List -->
         <div class="container py-4 ">
-            <div class="row g-4">
+            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4 p-1">
                 <!-- Product Card -->
-                <div class="col-6 col-md-6 col-lg-4 fade-in ">
+                <div class="col fade-in ">
                     <div class="card h-100 shadow-lg">
                         <img src="img/20l.jpg" class="card-img-top" alt="20LWaterbottle">
                         <div class="card-body d-flex flex-column ">
@@ -76,7 +78,7 @@
                 </div>
 
                 <!-- Product Card -->
-                <div class="col-6 col-md-6 col-lg-4 fade-in">
+                <div class="col fade-in">
                     <div class="card h-100 shadow-lg">
                         <img src="img/2l.jpg" class="card-img-top" alt="20LWaterbottle">
                         <div class="card-body d-flex flex-column">
@@ -96,7 +98,7 @@
                 </div>
 
                 <!-- Product Card -->
-                <div class="col-6 col-md-6 col-lg-4 fade-in">
+                <div class="col fade-in">
                     <div class="card h-100 shadow-lg">
                         <img src="img/1l.jpg" class="card-img-top" alt="20LWaterbottle">
                         <div class="card-body d-flex flex-column">
@@ -116,7 +118,7 @@
                 </div>
 
                 <!-- Product Card -->
-                <div class="col-6 col-md-6 col-lg-4 fade-in">
+                <div class="col fade-in">
                     <div class="card h-100 shadow-lg">
                         <img src="img/500ml.jpg" class="card-img-top" alt="20LWaterbottle">
                         <div class="card-body d-flex flex-column">
@@ -150,84 +152,85 @@
             </div>
         </div><br><br>
 
-    <!-- Footer -->
+        <!-- Footer -->
 
-    <footer class=" row align-items-center bg-black text-light text-center py-4 mt-5 " id="contact"
-      style="background-color: #f5f5f5; padding: 30px 20px; text-align: center; font-family: Arial, sans-serif; font-size: 14px; color: #333;">
+        <footer class=" row align-items-center bg-black text-light text-center py-4 mt-5 " id="contact"
+            style="background-color: #f5f5f5; padding: 30px 20px; text-align: center; font-family: Arial, sans-serif; font-size: 14px; color: #333;">
 
-      <!-- logo -->
-      <a href="#home" class=" col-lg-3 col-12 order-2 order-lg-1 mx-auto d-block my-5 d-none d-lg-block">
-        <img src="img/icon.png" alt="logo" class="logo">
-      </a>
+            <!-- logo -->
+            <a href="#home" class=" col-lg-3 col-12 order-2 order-lg-1 mx-auto d-block my-5 d-none d-lg-block">
+                <img src="img/icon.png" alt="logo" class="logo">
+            </a>
 
-      <!-- footnote -->
-      <div class="col-lg-6 col-12 order-3 order-lg-2 pt-3 d-none d-lg-block">
-        <strong>© 2025 Aniket Water Store. All rights reserved.</strong><br>
-        💧 <em>Delivering Purity</em><br><br>
+            <!-- footnote -->
+            <div class="col-lg-6 col-12 order-3 order-lg-2 pt-3 d-none d-lg-block">
+                <strong>© 2025 Aniket Water Store. All rights reserved.</strong><br>
+                💧 <em>Delivering Purity</em><br><br>
 
-        <p class="mb-0">📍Address: Patel Nagar, Patna 800023</p><br>
+                <p class="mb-0">📍Address: Patel Nagar, Patna 800023</p><br>
 
-        <p>📞 Customer Support: <a href="tel:+918539993163"
-            style="color: #0066cc; text-decoration: none;">+918539993163</a> |
-          ✉️Email:<a href="mailto:aniketkr853@gmail.com"
-            style="color: #0066cc; text-decoration: none;">aniketkr853@gmail.com</a></p> <br>
+                <p>📞 Customer Support: <a href="tel:+918539993163"
+                        style="color: #0066cc; text-decoration: none;">+918539993163</a> |
+                    ✉️Email:<a href="mailto:aniketkr853@gmail.com"
+                        style="color: #0066cc; text-decoration: none;">aniketkr853@gmail.com</a></p> <br>
 
-        🔒 100% Secure Payments | 🚚 Fast & Reliable Delivery | ♻️ Eco-Friendly Packaging<br><br>
-        <div>Developed with lots of ☕ by <a href="https://adiityachoudhary.github.io/web-dev/" target="_blank">Aditya
-            Choudhary</a></div>
-      </div>
+                🔒 100% Secure Payments | 🚚 Fast & Reliable Delivery | ♻️ Eco-Friendly Packaging<br><br>
+                <div>Developed with lots of ☕ by <a href="https://adiityachoudhary.github.io/web-dev/"
+                        target="_blank">Aditya
+                        Choudhary</a></div>
+            </div>
 
-      <!-- map -->
-      <div class="col-lg-3 col-12  order-1 order-lg-2 map d-none d-lg-block"><iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d652.863485811403!2d85.09551474130052!3d25.618569320281733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1750364845693!5m2!1sen!2sin"
-          width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+            <!-- map -->
+            <div class="col-lg-3 col-12  order-1 order-lg-2 map d-none d-lg-block"><iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d652.863485811403!2d85.09551474130052!3d25.618569320281733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1750364845693!5m2!1sen!2sin"
+                    width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe></div>
 
-    </footer>
-  </div>
-        
-
-       
+        </footer>
+    </div>
 
 
 
-        <!-- Cart Script -->
-        <script>
-            function addToCart(name, price, quantity) {
-                const cart = JSON.parse(localStorage.getItem("cart")) || [];
-                const existing = cart.find(item => item.name === name);
-                if (existing) {
-                    existing.quantity += parseInt(quantity);
-                } else {
-                    cart.push({ name, price, quantity: parseInt(quantity) });
-                }
-                localStorage.setItem("cart", JSON.stringify(cart));
-                alert(`${quantity} x ${name} added to cart.`);
+
+
+
+    <!-- Cart Script -->
+    <script>
+        function addToCart(name, price, quantity) {
+            const cart = JSON.parse(localStorage.getItem("cart")) || [];
+            const existing = cart.find(item => item.name === name);
+            if (existing) {
+                existing.quantity += parseInt(quantity);
+            } else {
+                cart.push({ name, price, quantity: parseInt(quantity) });
             }
-        </script>
+            localStorage.setItem("cart", JSON.stringify(cart));
+            alert(`${quantity} x ${name} added to cart.`);
+        }
+    </script>
 
 
 
     </div>
-     <div class=" d-block d-lg-none bottom-nav d-flex justify-content-around align-items-center position-fixed bottom-0 w-100 bg-white shadow-sm py-2"
-            style="z-index: 999;">
-            <a href="index.html#home" class="text-center text-decoration-none text-dark bottom-nav-link-hover">
-                <i class="fas fa-home d-block fs-5"></i>
-                <small>Home</small>
-            </a>
-            <a href="product.html#products" class="text-center text-decoration-none text-dark bottom-nav-link-hover">
-                <i class="fas fa-box-open d-block fs-5"></i>
-                <small>Products</small>
-            </a>
-            <a href="contact.html" class="text-center text-decoration-none text-dark bottom-nav-link-hover">
-                <i class="fas fa-envelope d-block fs-5"></i>
-                <small>Contact</small>
-            </a>
-            <a href="cart.html" class="text-center text-decoration-none text-dark bottom-nav-link-hover">
-                <i class="fas fa-shopping-cart d-block fs-5"></i>
-                <small>My Cart</small>
-            </a>
-        </div>
+    <div class=" d-block d-lg-none bottom-nav d-flex justify-content-around align-items-center position-fixed bottom-0 w-100 bg-white shadow-sm py-2"
+        style="z-index: 999;">
+        <a href="index.html#home" class="text-center text-decoration-none text-dark bottom-nav-link-hover">
+            <i class="fas fa-home d-block fs-5"></i>
+            <small>Home</small>
+        </a>
+        <a href="product.html#products" class="text-center text-decoration-none text-dark bottom-nav-link-hover">
+            <i class="fas fa-box-open d-block fs-5"></i>
+            <small>Products</small>
+        </a>
+        <a href="contact.html" class="text-center text-decoration-none text-dark bottom-nav-link-hover">
+            <i class="fas fa-envelope d-block fs-5"></i>
+            <small>Contact</small>
+        </a>
+        <a href="cart.html" class="text-center text-decoration-none text-dark bottom-nav-link-hover">
+            <i class="fas fa-shopping-cart d-block fs-5"></i>
+            <small>My Cart</small>
+        </a>
+    </div>
 </body>
 
 </html>
