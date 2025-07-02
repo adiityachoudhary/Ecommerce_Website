@@ -26,8 +26,8 @@ I'm always open to new opportunities, collaborations, and exciting tech discussi
 
 - 📧 Email: [adiiityachoudhary@gmail.com](mailto:adiiityachoudhary@gmail.com)
 - 💼 LinkedIn: [linkedin.com/in/aditya](https://www.linkedin.com/in/aditya-choudhary-908307171/)
-- 🐙 GitHub: [github.com/aditya](https://adiityachoudhary.github.io/web-dev/)
-- 🌐 Website: [aditya.com](https://adiityachoudhary.github.io/web-dev/)
+- 🐙 GitHub: [github.com/aditya](https://adiityachoudhary.github.io/portfolio/)
+- 🌐 Website: [aditya.com](https://adiityachoudhary.github.io/portfolio/)
 
 
 ---
